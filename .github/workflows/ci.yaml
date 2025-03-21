@@ -33,6 +33,7 @@ jobs:
         run: cargo fmt --all -- --check
       - name: clippy check
         run: cargo clippy --all-targets -- -D warnings
+
   check-deps:
     name: check-deps
     runs-on: ubuntu-latest
@@ -46,6 +47,7 @@ jobs:
         uses: EmbarkStudios/cargo-deny-action@v2
         with:
           arguments: --workspace --all-features
+
   test:
     name: test
     runs-on: ubuntu-latest
